@@ -1,0 +1,40 @@
+{
+  "name": "dex-agg-implementation",
+  "private": true,
+  "version": "0.1.0",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "next dev -p 8088",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@beincom/aa-coinbase": "file:../bic-chain-sdk/packages/aa-coinbase",
+    "@beincom/bic-signer-wasm": "^0.0.14",
+    "@beincom/chain-client": "^0.0.18-dev.4",
+    "@beincom/chain-shared": "^0.0.15",
+    "@beincom/dex": "^0.0.8-dev",
+    "@beincom/marketplace": "^0.0.10-dev",
+    "@beincom/payments": "^0.0.7-dev",
+    "@beincom/signers": "^0.0.33-dev",
+    "@rainbow-me/rainbowkit": "^2.2.3",
+    "@tailwindcss/postcss": "^4.0.3",
+    "@tanstack/react-query": "^5.55.3",
+    "axios": "^1.7.9",
+    "jwt-decode": "^4.0.0",
+    "next": "^15.1.4",
+    "postcss": "^8.5.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-toastify": "^11.0.3",
+    "tailwindcss": "^4.0.3",
+    "usehooks-ts": "^3.1.0",
+    "viem": "^2.21.55",
+    "wagmi": "^2.14.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.8",
+    "@types/react": "^19.0.6",
+    "typescript": "5.5.2"
+  }
+}
