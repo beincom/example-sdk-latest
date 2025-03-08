@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { ChainApiClient } from "@beincom/chain-client";
-import { BIC_CHAIN_API_DEV_URL, BIC_CHAIN_API_LOCAL_URL } from "../utils";
+import { BIC_CHAIN_API_DEV_URL, BIC_CHAIN_API_NFT_LOCAL_URL, BIC_CHAIN_API_WALLET_LOCAL_URL } from "../utils";
 import { useLocalStorage } from "usehooks-ts";
 import { AuthSession } from "../types";
 import { jwtDecode } from "jwt-decode";
@@ -39,9 +39,9 @@ const useChainApiClient = () => {
         "user": JSON.stringify(session?.id_token ? jwtDecode(session?.id_token): {}),
       })
       // .includeCredentials()
-
+      
     return chainClient;
-  }, [BIC_CHAIN_API_DEV_URL, session]);
+  }, [session]);
 
   return client;
 };

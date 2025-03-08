@@ -11,7 +11,7 @@
   "dependencies": {
     "@beincom/aa-coinbase": "file:../bic-chain-sdk/packages/aa-coinbase",
     "@beincom/bic-signer-wasm": "^0.0.14",
-    "@beincom/chain-client": "^0.0.18-dev.4",
+    "@beincom/chain-client": "file:../bic-chain-sdk/packages/chain-client",
     "@beincom/chain-shared": "^0.0.15",
     "@beincom/dex": "^0.0.8-dev",
     "@beincom/marketplace": "^0.0.10-dev",
