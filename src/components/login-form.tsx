@@ -4,7 +4,7 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { useLocalStorage } from "usehooks-ts";
 
-import { BIC_APP_API_DEV_URL, getBicSigner } from "../utils";
+import { BIC_APP_API_DEV_URL, BIC_APP_API_REL_URL, getBicSigner } from "../utils";
 import useNotification from "../hooks/useNotification";
 
 const LoginForm = () => {

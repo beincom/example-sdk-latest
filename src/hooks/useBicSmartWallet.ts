@@ -86,6 +86,7 @@ const useBicSmartWallet = () => {
       signer,
       // ...addresses,
       bundlerUrl: config.bundlerUrl,
+      // proxyUserOpUrl: "http://localhost:3000",
       // new updated for fallback rpc
       rpcs: chainConfig.rpcs,
       bicAddress: config.paymasterAddress,

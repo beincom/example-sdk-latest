@@ -14,7 +14,7 @@
     "@beincom/chain-client": "file:../bic-chain-sdk/packages/chain-client",
     "@beincom/chain-shared": "^0.0.15",
     "@beincom/dex": "^0.0.8-dev",
-    "@beincom/marketplace": "^0.0.10-dev",
+    "@beincom/marketplace": "file:../bic-chain-sdk/packages/marketplace",
     "@beincom/payments": "^0.0.7-dev",
     "@beincom/signers": "^0.0.33-dev",
     "@rainbow-me/rainbowkit": "^2.2.3",

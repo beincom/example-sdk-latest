@@ -3,7 +3,9 @@ import { Hex } from "viem";
 export const BIC_CHAIN_API_WALLET_LOCAL_URL = 'http://localhost:3000';
 export const BIC_CHAIN_API_NFT_LOCAL_URL = 'http://localhost:3001';
 export const BIC_CHAIN_API_DEV_URL = 'https://chain.beincom.io/v1/chain';
+export const BIC_CHAIN_API_REL_URL = 'https://chain.beincom.biz/v1/chain';
 export const BIC_APP_API_DEV_URL = 'https://api.beincom.io';
+export const BIC_APP_API_REL_URL = 'https://api.beincom.biz';
 
 
 export const BUNDLER_API_URL = {
