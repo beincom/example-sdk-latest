@@ -10,20 +10,22 @@ import { ToastContainer } from 'react-toastify';
 import { config } from '../wagmi';
 import { useEffect, useState } from 'react';
 import { loadWasm } from '../utils/bic-signer';
+import { CookiesProvider, useCookies } from 'react-cookie'
 
 const client = new QueryClient();
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [isLoadWasm, setIsLoadWasm] = useState<boolean>(false);
+  const [isLoadWasm, setIsLoadWasm] = useState<boolean>(true);
 
   useEffect(() => {
-    loadWasm().then(() => {
-        setTimeout(() => {
-            setIsLoadWasm(true)
-        }, 1000)
-    })
+    // loadWasm().then(() => {
+    //     setTimeout(() => {
+    //         setIsLoadWasm(true)
+    //     }, 1000)
+    // })
 })
   return (
+    <CookiesProvider>
     <WagmiProvider config={config}>
       <QueryClientProvider client={client}>
         <RainbowKitProvider>
@@ -37,6 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
+    </CookiesProvider>
   );
 }
 

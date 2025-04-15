@@ -4,7 +4,11 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { useLocalStorage } from "usehooks-ts";
 
-import { BIC_APP_API_DEV_URL, BIC_APP_API_REL_URL, getBicSigner } from "../utils";
+import {
+  BIC_APP_API_URL,
+  BIC_ORIGIN,
+  getBicSigner,
+} from "../utils";
 import useNotification from "../hooks/useNotification";
 
 const LoginForm = () => {
@@ -29,25 +33,29 @@ const LoginForm = () => {
       notify("Email and password are required", "error");
       return;
     }
-  
 
     try {
       setIsLoginLoading(true);
       const res = await axios.post<{ data: AuthSession }>(
-        `${BIC_APP_API_DEV_URL}/v1/auth/public/login`,
+        `${BIC_APP_API_URL}/v1/auth/public/login`,
         {
           email,
           password,
           device: {
+            application: "BIC_GROUP",
+            platform: "WEB",
             device_id: "9247532c-0f7d-4c02-8282-4b5d00879e1d",
             device_name:
               "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-            application: "BIC_GROUP",
-            platform: "WEB",
           },
         },
         {
-          headers: { "x-version-id": "2.2.0" },
+          headers: {
+            "x-application": "BIC_GROUP",
+            "x-platform": "ANDROID",
+            "x-version-id": "2.3.0",
+     
+          },
         }
       );
 

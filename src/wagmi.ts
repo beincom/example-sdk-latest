@@ -10,7 +10,7 @@ import {
 
 export const config = getDefaultConfig({
   appName: 'RainbowKit App',
-  projectId: 'YOUR_PROJECT_ID',
+  projectId: '5b8a678d1a6b7547733511769f469f2e',
   chains: [
     arbitrum,
   ],
